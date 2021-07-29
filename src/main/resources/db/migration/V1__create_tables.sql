@@ -10,7 +10,8 @@ create table users (
 create table articles (
   id varchar(255) primary key,
   user_id varchar(255),
-  title varchar(255),
+  title varchar(255) UNIQUE,
+  slug varchar(255) UNIQUE,
   description text,
   body text,
   created_at TIMESTAMP NOT NULL,
@@ -19,8 +20,7 @@ create table articles (
 
 create table tags (
   id varchar(255) primary key,
-  name varchar(255) not null,
-  reference_article_count int
+  name varchar(255) not null
 );
 
 create table article_tags (
