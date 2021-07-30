@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.util.Optional;
 
 @Getter
 @JsonRootName("user")
@@ -24,4 +25,6 @@ public class UserRegisterParam {
 
 	@NotBlank(message = "can't be empty")
 	private String password;
+
+	private Optional<String> bio;
 }

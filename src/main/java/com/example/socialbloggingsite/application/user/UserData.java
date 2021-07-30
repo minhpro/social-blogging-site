@@ -17,9 +17,10 @@ public class UserData {
 		return
 				new UserData(
 						user.getId(),
-						user.getBio(),
 						user.getEmail(),
-						user.getImage(),
-						user.getUsername());
+						user.getUsername(),
+						user.getBio(),
+						user.getImage()
+						);
 	}
 }

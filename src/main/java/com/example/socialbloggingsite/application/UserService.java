@@ -28,7 +28,7 @@ public class UserService {
 						registerParam.getEmail(),
 						registerParam.getUsername(),
 						encryptService.encryptPassword(registerParam.getPassword()),
-						"",
+						registerParam.getBio().isPresent() ? registerParam.getBio().get() : "",
 						"");
 		userRepository.save(user);
 		return UserData.fromUser(user);
